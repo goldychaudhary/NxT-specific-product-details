@@ -1,0 +1,26 @@
+.similar-prod-container {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.similar-prod-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 400px;
+  margin-right: 20px;
+}
+.similar-title {
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #1e293b;
+}
+.similar-rating-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.similar-heading {
+  margin-left: 40px;
+}
