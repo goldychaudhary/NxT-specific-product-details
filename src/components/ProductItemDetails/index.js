@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
-import {Loader} from 'react-loader-spinner'
+import Loader from 'react-loader-spinner'
 import {BsPlusSquare, BsDashSquare} from 'react-icons/bs'
 import Header from '../Header'
 
@@ -120,7 +120,7 @@ class ProductItemDetails extends Component {
           <hr className="hr-line" />
           <div className="count-container">
             <button
-              data-testid="minus"
+              testid="minus"
               onClick={this.onDecQuantity}
               className="plus-btn"
               type="button"
@@ -129,7 +129,7 @@ class ProductItemDetails extends Component {
             </button>
             <p className="count-para">{count}</p>
             <button
-              data-testid="plus"
+              testid="plus"
               onClick={this.onIncQuantity}
               className="plus-btn"
               type="button"
@@ -147,7 +147,7 @@ class ProductItemDetails extends Component {
 
   renderProductDetails = () => {
     const {similarProductsList} = this.state
-    console.log('product details')
+
     return (
       <div>
         <Header />
@@ -171,11 +171,11 @@ class ProductItemDetails extends Component {
     <>
       <img
         src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-error-view-img.png"
-        alt="error view"
+        alt="failure view"
         className="register-prime-image"
       />
       <h1>Product Not Found</h1>
-      <button onClick={this.continueShopping()} type="button">
+      <button onClick={this.continueShopping} type="button">
         Continue Shopping
       </button>
     </>
@@ -203,21 +203,6 @@ class ProductItemDetails extends Component {
       default:
         return null
     }
-
-    // if (apiStatus === apiStatusConstants.success) {
-    //   console.log('success if block')
-    //   return this.renderProductDetails()
-    // }
-    // if (apiStatus === apiStatusConstants.failure) {
-    //   console.log('fail if block')
-    //   return this.renderProductFailureView()
-    // }
-    // if (apiStatus === apiStatusConstants.inProgress) {
-    //   console.log('load if block')
-    //   return this.renderLoading()
-    // }
-
-    // return null
   }
 }
 

@@ -7,7 +7,7 @@ const SimilarProductItem = props => {
   return (
     <li className="similar-prod-card">
       <img src={imageUrl} alt={`similar product ${title}`} />
-      <h1 className="similar-title">{title}</h1>
+      <p className="similar-title">{title}</p>
       <p className="similar-brand">by {brand}</p>
       <div className="similar-rating-price">
         <p className="price">Rs {price}/- </p>
